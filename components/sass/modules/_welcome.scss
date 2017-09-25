@@ -22,9 +22,15 @@
              display: none;
 
              @include breakpoint ($small) {
+                 @include gallery(1 of 4);
+                 display:inline;
+                 &.hidesm {display: none;}
+             }//breakpoint small
+             @include breakpoint ($medium) {
                  @include gallery(1 of 5);
                  display:inline;
-             }//breakpoint
+                 &.hidesm {display: inline;}
+             }//breakpoint medium
          }//img
      }//gallery
  }//welcome
